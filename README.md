@@ -15,12 +15,12 @@ A browser extension that automates Reddit comment deletion with persistent track
 Many users want to manage their digital footprint but find manual comment deletion tedious. This extension solves that problem with smart automation while ensuring user control through pause/resume functionality and visual feedback.
 
 ## ✨ Key Features
-- 🗑️ Automated comment deletion with confirmation handling
-- 🎮 Built-in control panel (Start/Pause/Stop)
-- 🔢 Persistent deletion counter across sessions
-- 📖 Auto-pagination (every 25 comments)
-- 🌐 Works on Chrome, Firefox, Brave, and Edge
-- 🎨 Clean floating UI with real-time updates
+- Automated comment deletion with confirmation handling
+- Built-in control panel (Start/Pause/Stop)
+- Persistent deletion counter across sessions
+- Auto-pagination (every 25 comments)
+- Works on Chrome, Firefox, Brave, and Edge
+- Clean floating UI with real-time updates
 
 ## ⚙ Requirements
 - Modern web browser (Chrome 80+/Firefox 78+/Edge 80+)
