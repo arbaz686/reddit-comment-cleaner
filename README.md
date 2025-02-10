@@ -31,7 +31,7 @@ Many users want to manage their digital footprint but find manual comment deleti
 
 ### Step 1: Get the Code
 ```bash
-git clone https://github.com/yourusername/reddit-comment-cleaner.git
+git clone https://github.com/arbaz686/reddit-comment-cleaner.git
 cd reddit-comment-cleaner
 ```
 
