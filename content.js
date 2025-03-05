@@ -5,33 +5,42 @@ let intervalId = null;
 
 // Create a persistent control panel UI
 function createControlPanel() {
-    const panel = document.createElement('div');
-    panel.id = "rdc-controls";
-    panel.style.position = 'fixed';
-    panel.style.bottom = '20px';
-    panel.style.right = '20px';
-    panel.style.backgroundColor = 'white';
-    panel.style.padding = '15px';
-    panel.style.borderRadius = '8px';
-    panel.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
-    panel.style.zIndex = '10000';
-    panel.style.display = 'flex';
-    panel.style.gap = '10px';
-    panel.style.alignItems = 'center';
+  const panel = document.createElement('div');
+  panel.id = "rdc-controls";
+  panel.style.position = 'fixed';
+  panel.style.bottom = '20px';
+  panel.style.right = '20px';
+  panel.style.backgroundColor = 'white';
+  panel.style.padding = '15px';
+  panel.style.borderRadius = '8px';
+  panel.style.boxShadow = '0 2px 10px rgba(0,0,0,0.1)';
+  panel.style.zIndex = '10000';
+  panel.style.display = 'flex';
+  panel.style.flexDirection = 'column';
+  panel.style.alignItems = 'center';
+  panel.style.gap = '10px';
 
-    panel.innerHTML = `
-        <div id="rdc-counter" style="font-weight: bold; color: #ff4500;">Deleted: 0</div>
-        <button id="rdc-toggle" style="padding: 8px 12px; background: #ff4500; color: white; border: none; border-radius: 4px; cursor: pointer;">
-            <svg width="18" height="18" viewBox="0 0 24 24" style="vertical-align: middle;">
-                <path fill="currentColor" d="M6 4h4v16H6zm8 0h4v16h-4z"/>
-            </svg>
-            Pause
-        </button>
-        <button id="rdc-reset" style="padding: 8px 12px; background: #878a8c; color: white; border: none; border-radius: 4px; cursor: pointer;">Reset</button>
-        <button id="rdc-close" style="padding: 4px 8px; background: #ff4500; color: white; border: none; border-radius: 50%; cursor: pointer; font-size: 14px; font-weight: bold;">✕</button>
-    `;
+  panel.innerHTML = `
+    <button id="rdc-close" style="position:absolute; top:5px; right:5px; background:none; border:none; cursor:pointer;">❌</button>
+    <a href="https://github.com/arbaz686/reddit-comment-deleter" target="_blank" style="text-decoration:none; color:#ff4500; font-weight:bold;">
+      ⭐ Star the Repo
+    </a>
+    <div id="rdc-counter" style="font-weight: bold; color: #ff4500;">Deleted: 0</div>
+    <button id="rdc-toggle" style="padding: 8px 12px; background: #ff4500; color: white; border: none; border-radius: 4px; cursor: pointer;">
+      <svg width="18" height="18" viewBox="0 0 24 24" style="vertical-align: middle;">
+        <path fill="currentColor" d="M6 4h4v16H6zm8 0h4v16h-4z"/>
+      </svg>
+      Pause
+    </button>
+    <button id="rdc-stop" style="padding: 8px 12px; background: #878a8c; color: white; border: none; border-radius: 4px; cursor: pointer;">
+      <svg width="18" height="18" viewBox="0 0 24 24" style="vertical-align: middle;">
+        <path fill="currentColor" d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"/>
+      </svg>
+      Reset
+    </button>
+  `;
 
-    document.body.appendChild(panel);
+  document.body.appendChild(panel);
 }
 
 // Initialize UI and stored data
